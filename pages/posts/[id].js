@@ -1,6 +1,8 @@
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`);
+  const res = await fetch(
+    `https://keysi-next-blog-backend.herokuapp.com/posts/${id}`
+  );
   console.log({ res });
   const post = await res.json();
 

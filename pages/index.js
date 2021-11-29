@@ -3,7 +3,9 @@ import { Article } from "./components/Article";
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/posts`);
+  const res = await fetch(
+    `https://keysi-next-blog-backend.herokuapp.com/posts`
+  );
   const posts = await res.json();
 
   return { props: { posts } };
