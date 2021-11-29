@@ -1,16 +1,17 @@
 code {
-  background: #60a5fa;
+  background: #343a40;
   color: white;
-  padding: 5px !important;
-  border-radius: 8px !important;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 20px;
 }
 
 b,
 strong {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 p {
   font-size: 20px;
-  color: white;
+  color: #343a40;
 }

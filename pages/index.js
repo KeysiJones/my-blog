@@ -14,7 +14,7 @@ export async function getServerSideProps() {
 export default function Home({ posts }) {
   return (
     <div className="flex flex-col">
-      <div className="mb-8 border-b">
+      <div className="border-b">
         <Head>
           <title>Keysi Jones Blog</title>
           <link rel="icon" href="/favicon.ico" />
@@ -27,9 +27,13 @@ export default function Home({ posts }) {
               height="170"
               className="rounded-full mb-2"
             />
-            <h1 className="text-6xl font-bold text-blue-400">Keysi Jones</h1>
+            <h1 className="text-6xl font-bold" style={{ color: "#343a40" }}>
+              Keysi Jones
+            </h1>
           </div>
-          <h2 className="text-4xl mb-8 text-blue-400">Artigos</h2>
+          <h2 className="text-4xl" style={{ color: "#343a40" }}>
+            Artigos
+          </h2>
           <div>
             {posts.map((post) => (
               <Article
@@ -40,7 +44,6 @@ export default function Home({ posts }) {
               />
             ))}
           </div>
-          <div id="div_editor1"></div>
         </main>
       </div>
     </div>
