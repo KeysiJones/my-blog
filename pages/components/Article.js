@@ -8,12 +8,12 @@ function Article({ id, title, subtitle }) {
       <a className="font-bold text-2xl text-blue-400">
         <button
           onClick={() => router.push(`/posts/${id}`)}
-          className="hover:underline"
+          className="hover:underline text-3xl"
         >
           {title}
         </button>
       </a>
-      <p className="text-gray-500">{subtitle}</p>
+      <p className="text-gray-400">{subtitle}</p>
     </div>
   );
 }

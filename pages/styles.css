@@ -1,0 +1,16 @@
+code {
+  background: #60a5fa;
+  color: white;
+  padding: 5px !important;
+  border-radius: 8px !important;
+}
+
+b,
+strong {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+  color: white;
+}
