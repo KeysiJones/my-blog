@@ -13,7 +13,7 @@ export async function getServerSideProps() {
 
 export default function Home({ posts }) {
   return (
-    <div className="flex flex-col justify-around min-h-screen">
+    <div className="flex flex-col">
       <div className="mb-8 border-b">
         <Head>
           <title>Keysi Jones Blog</title>
@@ -29,7 +29,7 @@ export default function Home({ posts }) {
             />
             <h1 className="text-6xl font-bold text-blue-400">Keysi Jones</h1>
           </div>
-          <h2 className="text-3xl mb-8 text-blue-400">Artigos</h2>
+          <h2 className="text-4xl mb-8 text-blue-400">Artigos</h2>
           <div>
             {posts.map((post) => (
               <Article

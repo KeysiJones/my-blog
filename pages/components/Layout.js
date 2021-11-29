@@ -1,9 +1,9 @@
 export default function Layout({ children }) {
   return (
-    <div className="px-64 py-4 min-h-screen bg-gray-800">
+    <div className="px-64 py-4 min-h-screen bg-gray-800 flex flex-col justify-between">
       {children}
-      <h3 className="mb-2 text-center text-3xl text-white">Redes sociais</h3>
-      <footer className="flex items-center justify-center w-full">
+      <footer className="flex flex-col items-center justify-center w-full">
+        <h3 className=" text-center text-3xl text-white">Redes sociais</h3>
         <div className="bg-gray-700 py-3 rounded-lg text-white w-full text-center justify-between">
           <button
             onClick={() => window.open("https://linkedin.com/in/keysijones")}
