@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function Article({ id, title, subtitle }) {
+export default function Article({ id, title, subtitle }) {
   const router = useRouter();
 
   return (
