@@ -22,7 +22,7 @@ export default function Layout({ children }) {
             <FontAwesomeIcon icon={["fab", "twitter"]} />
           </button>
           <button
-            onClick={() => window.open("https://keysijones.vercel.app/")}
+            onClick={() => window.open("https://github.com/KeysiJones")}
             className="bg-green-600 mx-2 py-1 px-2 rounded text-3xl"
           >
             <FontAwesomeIcon icon={["fab", "github"]} />
