@@ -16,24 +16,29 @@ export default function Layout({ children }) {
         <div className="py-3 rounded-lg text-white text-left mb-2">
           <button
             onClick={() => window.open("https://linkedin.com/in/keysijones")}
-            className="bg-blue-400 mr-2 p-1 px-2 rounded text-xl"
+            className="bg-blue-400 mr-2 p-1 px-2 rounded text-3xl"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-            {/* LinkedIn */}
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </button>
           <button
             onClick={() => window.open("https://twitter.com/keysi_jones")}
-            className="bg-gray-800 mx-2 p-1 px-2 rounded text-xl"
+            className="bg-gray-800 mx-2 p-1 px-2 rounded text-3xl"
           >
-            <FontAwesomeIcon icon={faTwitter} size="2x" />
+            <FontAwesomeIcon icon={faTwitter} />
           </button>
           <button
             onClick={() => window.open("https://keysijones.vercel.app/")}
-            className="bg-green-600 mx-2 py-1 px-2 rounded text-xl"
+            className="bg-green-600 mx-2 py-1 px-2 rounded text-3xl"
           >
-            <FontAwesomeIcon icon={faGithub} size="2x" />
+            <FontAwesomeIcon icon={faGithub} />
           </button>
         </div>
+        <p
+          className={`text-gray-700 border-gray-700"
+          } text-center text-xl mt-4`}
+        >
+          &copy; {new Date().getFullYear()} Keysi Jones. All rights reserved
+        </p>
       </footer>
     </div>
   );
