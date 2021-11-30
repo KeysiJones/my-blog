@@ -1,8 +1,3 @@
-import {
-  faGithub,
-  faLinkedinIn,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Layout({ children }) {
@@ -18,19 +13,19 @@ export default function Layout({ children }) {
             onClick={() => window.open("https://linkedin.com/in/keysijones")}
             className="bg-blue-400 mr-2 p-1 px-2 rounded text-3xl"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} />
+            <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
           </button>
           <button
             onClick={() => window.open("https://twitter.com/keysi_jones")}
             className="bg-gray-800 mx-2 p-1 px-2 rounded text-3xl"
           >
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={["fab", "twitter"]} />
           </button>
           <button
             onClick={() => window.open("https://keysijones.vercel.app/")}
             className="bg-green-600 mx-2 py-1 px-2 rounded text-3xl"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={["fab", "github"]} />
           </button>
         </div>
         <p
