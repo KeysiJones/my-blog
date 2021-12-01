@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Article } from "../components/Article";
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     `https://keysi-next-blog-backend.herokuapp.com/posts`
   );

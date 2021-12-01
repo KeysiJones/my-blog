@@ -1,9 +1,21 @@
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  const res = await fetch(
+    `https://keysi-next-blog-backend.herokuapp.com/posts/`
+  );
+
+  const posts = await res.json();
+
+  const paths = posts.map((post) => ({ params: { id: post.id.toString() } }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps(context) {
   const { id } = context.params;
   const res = await fetch(
     `https://keysi-next-blog-backend.herokuapp.com/posts/${id}`
   );
-  console.log({ res });
+
   const { title, subtitle, body } = await res.json();
 
   return { props: { title, subtitle, body } };
