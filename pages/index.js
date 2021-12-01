@@ -27,9 +27,13 @@ export default function Home({ posts }) {
               height="170"
               className="rounded-full mb-2"
             />
-            <h1 className="text-6xl font-bold" style={{ color: "#343a40" }}>
+            <a
+              className="text-6xl font-bold"
+              href="https://linkedin.com/in/keysijones"
+              style={{ color: "#343a40" }}
+            >
               Keysi Jones
-            </h1>
+            </a>
           </div>
           <h2 className="text-4xl" style={{ color: "#343a40" }}>
             Artigos
