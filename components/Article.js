@@ -1,7 +1,12 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Article({ id, title, subtitle }) {
   const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(`/posts/${id}`);
+  }, []);
 
   return (
     <div className="my-16">

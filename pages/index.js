@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Article } from "./components/Article";
+import { Article } from "../components/Article";
 
 // This gets called on every request
 export async function getServerSideProps() {
