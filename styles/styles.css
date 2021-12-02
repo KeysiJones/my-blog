@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  transition: all 1s ease-out;
+  animation-name: sets_opacity;
+  animation-duration: 1s;
+}
+
+@keyframes sets_opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h1,
+h2,
+a,
+p {
+  color: #343a40;
+}
+
+@media (min-width: 1200px) {
+  div#main-layout {
+    @apply px-64 py-4 min-h-screen flex flex-col justify-between;
+  }
+}
+
+@media (min-width: 758px) and (max-width: 1200px) {
+  div#main-layout {
+    @apply px-40 py-4 min-h-screen flex flex-col justify-between;
+  }
+}
+
+@media (min-width: 758px) {
+  div#avatar-title {
+    @apply flex flex-col items-center p-8;
+  }
+
+  h1 {
+    @apply text-5xl mt-20 mb-4 text-left;
+  }
+
+  b,
+  strong {
+    @apply text-4xl;
+  }
+}
+
+@media (max-width: 758px) {
+  div#main-layout {
+    @apply px-4 py-4 min-h-screen flex flex-col justify-between;
+    width: fit-content;
+    padding: 20px;
+  }
+
+  div#avatar-title {
+    @apply flex flex-col items-center py-8;
+  }
+
+  h1 {
+    @apply text-4xl font-bold mt-2 mb-4 text-left;
+  }
+
+  b,
+  strong {
+    @apply text-3xl;
+  }
+
+  code {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+}
+
+code {
+  background: #343a40;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+  color: #343a40;
+}

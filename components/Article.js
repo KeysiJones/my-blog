@@ -1,25 +1,20 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 export default function Article({ id, title, subtitle }) {
   const router = useRouter();
 
-  useEffect(() => {
-    router.prefetch(`/posts/${id}`);
-  }, []);
-
   return (
-    <div className="my-16">
-      <a className="font-bold" style={{ color: "#343a40" }}>
-        <button
+    <div className="mb-16">
+      <a className="font-bold">
+        <h1
           onClick={() => router.push(`/posts/${id}`)}
-          className="hover:underline text-5xl text-left"
+          className="hover:underline hover:cursor-pointer"
         >
           {title}
-        </button>
+        </h1>
       </a>
       <p className="text-gray-500 text-left text-3xl mt-2">{subtitle}</p>
-      <p style={{ color: "#343a40" }} className="mt-4">
+      <p className="mt-4">
         Postado por{" "}
         <a
           className="italic underline"

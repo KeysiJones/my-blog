@@ -1,12 +1,12 @@
-import Layout from "../components/Layout";
 import "tailwindcss/tailwind.css";
-import "../public/styles/styles.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import "../styles/styles.css";
+import Layout from "../components/Layout";
+import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { Loader } from "../components/Loader";
 
 config.autoAddCss = false;
 
@@ -28,14 +28,12 @@ function MyApp({ Component, pageProps }) {
     router.events.on("routeChangeStart", handleRouteStart);
     router.events.on("routeChangeComplete", handleRouteEnd);
   }, [loading, setLoading]);
+
   return (
     <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {loading ? (
-        <>
-          <div className="m-auto h-screen text-center text-3xl flex flex-col items-center justify-center">
-            <div className="border-8  border-b-gray-700 border-r-gray-700 p-2 rounded-full w-32 h-32 animate-spin"></div>
-          </div>
-        </>
+        <Loader />
       ) : (
         <Layout>
           <Component {...pageProps} />

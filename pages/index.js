@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Article } from "../components/Article";
 
-// This gets called on every request
 export async function getStaticProps() {
   const res = await fetch(
     `https://keysi-next-blog-backend.herokuapp.com/posts`
@@ -20,7 +19,7 @@ export default function Home({ posts }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-          <div className="flex flex-col items-center p-8">
+          <div id="avatar-title">
             <img
               src="/images/keysiredondo.jpeg"
               width="170"
@@ -28,16 +27,13 @@ export default function Home({ posts }) {
               className="rounded-full mb-2"
             />
             <a
-              className="text-6xl font-bold"
+              className="text-5xl font-bold"
               href="https://linkedin.com/in/keysijones"
-              style={{ color: "#343a40" }}
             >
               Keysi Jones
             </a>
           </div>
-          <h2 className="text-4xl" style={{ color: "#343a40" }}>
-            Artigos
-          </h2>
+          <h2 className="mb-12 sm:mb-4 underline">Artigos</h2>
           <div>
             {posts.map((post) => (
               <Article
