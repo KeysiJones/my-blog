@@ -33,7 +33,7 @@ export default function Home({ posts }) {
               Keysi Jones
             </a>
           </div>
-          <h2 className="mb-12 sm:mb-4 underline">Artigos</h2>
+          <h2 className="mb-12 sm:mb-4">Artigos</h2>
           <div>
             {posts.map((post) => (
               <Article
