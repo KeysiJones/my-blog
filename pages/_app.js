@@ -29,17 +29,12 @@ function MyApp({ Component, pageProps }) {
     router.events.on("routeChangeComplete", handleRouteEnd);
   }, [loading, setLoading]);
 
-  return (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {loading ? (
-        <Loader />
-      ) : (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      )}
-    </>
+  return loading ? (
+    <Loader />
+  ) : (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
