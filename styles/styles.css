@@ -26,7 +26,9 @@ h2 {
 h1,
 h2,
 a,
-p {
+p,
+strong,
+b {
   color: #343a40;
 }
 
@@ -90,8 +92,8 @@ p {
 code {
   background: #343a40;
   color: white;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 4px 8px;
+  @apply rounded-full;
   font-size: 20px;
 }
 

@@ -2,9 +2,8 @@ import Head from "next/head";
 import { Article } from "../components/Article";
 
 export async function getStaticProps() {
-  const res = await fetch(
-    `https://keysi-next-blog-backend.herokuapp.com/posts`
-  );
+  const BASE_URL = process.env.REACT_APP_BLOG_API;
+  const res = await fetch(`${BASE_URL}/posts`);
   const posts = await res.json();
 
   return { props: { posts } };

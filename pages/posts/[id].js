@@ -1,10 +1,8 @@
+const BASE_URL = process.env.REACT_APP_BLOG_API;
+
 export async function getStaticPaths() {
-  const res = await fetch(
-    `https://keysi-next-blog-backend.herokuapp.com/posts/`
-  );
-
+  const res = await fetch(`${BASE_URL}/posts/`);
   const posts = await res.json();
-
   const paths = posts.map((post) => ({ params: { id: post.id.toString() } }));
 
   return { paths, fallback: false };
@@ -12,9 +10,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { id } = context.params;
-  const res = await fetch(
-    `https://keysi-next-blog-backend.herokuapp.com/posts/${id}`
-  );
+  const res = await fetch(`${BASE_URL}/posts/${id}`);
 
   const { title, subtitle, body } = await res.json();
 

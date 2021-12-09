@@ -14,24 +14,24 @@ library.add(fab);
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const handleRouteStart = () => {
-      setLoading(true);
+      setIsLoading(true);
     };
 
     const handleRouteEnd = () => {
-      setLoading(false);
+      setIsLoading(false);
     };
 
     router.events.on("routeChangeStart", handleRouteStart);
     router.events.on("routeChangeComplete", handleRouteEnd);
-  }, [loading, setLoading]);
+  }, [isLoading, setIsLoading]);
 
-  return loading ? (
-    <Loader />
-  ) : (
+  if (isLoading) return <Loader />;
+
+  return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
