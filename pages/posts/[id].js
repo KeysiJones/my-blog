@@ -19,10 +19,30 @@ export async function getStaticProps(context) {
 
 export default function postDetail({ title, subtitle, body }) {
   return (
-    <div>
+    <div className="mb-8">
       <h1>{title}</h1>
       <h2 className="text-gray-400 text-left text-3xl mt-2 mb-4">{subtitle}</h2>
-      <div id="post-body" dangerouslySetInnerHTML={{ __html: body }} />
+      <div
+        id="post-body"
+        dangerouslySetInnerHTML={{ __html: body }}
+        className="mb-12"
+      />
+      <div className="flex flex-row items-center">
+        <img
+          src="/images/keysiredondo.jpeg"
+          width="100"
+          height="100"
+          className="rounded-full mr-4"
+        />
+        <div className="flex flex-col">
+          <strong>Keysi Jones</strong>
+          <p>
+            <a href="https://keysijones.vercel.app" className="hover:underline">
+              About the author
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
