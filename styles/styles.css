@@ -71,7 +71,7 @@ b {
   }
 
   h1 {
-    @apply text-4xl font-bold mt-2 mb-4 text-left;
+    @apply text-4xl font-bold my-2 text-left;
   }
 
   b,
@@ -81,11 +81,15 @@ b {
 
   code {
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px !important;
   }
 
   p {
-    font-size: 30px;
+    font-size: 20px !important;
+  }
+
+  p.subtitle {
+    font-size: 23px !important;
   }
 }
 

@@ -13,7 +13,7 @@ export default function Article({ id, title, subtitle }) {
           {title}
         </h1>
       </a>
-      <p className="text-gray-500 text-left text-3xl mt-2">{subtitle}</p>
+      <p className="text-gray-500 text-left text-3xl subtitle">{subtitle}</p>
       <p className="mt-4">
         Postado por{" "}
         <a
