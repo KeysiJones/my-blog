@@ -122,3 +122,8 @@ code {
   background-color: #1e293b;
   @apply text-white font-bold px-1 rounded-md;
 }
+
+img.code {
+  border-radius: 10px;
+  width: 100%;
+}
