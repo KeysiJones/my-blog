@@ -29,7 +29,7 @@ a,
 p,
 strong,
 b {
-  color: #343a40;
+  color: #1e293b;
 }
 
 @media (min-width: 1200px) {
@@ -90,7 +90,7 @@ b {
 
 p {
   font-size: 25px;
-  color: #343a40;
+  color: #1e293b;
   font-weight: lighter;
 }
 
@@ -99,7 +99,7 @@ p {
 }
 
 div.code-bg {
-  background-color: #343a40;
+  background-color: #1e293b;
   border-radius: 3px;
   color: white;
   padding: 10px;
@@ -108,7 +108,7 @@ div.code-bg {
 
 li {
   font-size: 20px;
-  color: #343a40;
+  color: #1e293b;
   font-weight: lighter;
   list-style: initial;
 }
@@ -119,6 +119,6 @@ ul {
 
 span.code,
 code {
-  background-color: #343a40;
+  background-color: #1e293b;
   @apply text-white font-bold px-1 rounded-md;
 }
