@@ -20,8 +20,8 @@ export async function getStaticProps(context) {
 export default function postDetail({ title, subtitle, body }) {
   return (
     <div className="mb-8">
-      <h1>{title}</h1>
-      <h2 className="text-gray-400 text-left text-3xl mt-2 mb-4">{subtitle}</h2>
+      <h1 className="font-extrabold">{title}</h1>
+      <h2 className="text-gray-500 text-left text-3xl mt-2 mb-4">{subtitle}</h2>
       <div
         id="post-body"
         dangerouslySetInnerHTML={{ __html: body }}
