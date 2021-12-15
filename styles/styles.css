@@ -79,11 +79,6 @@ b {
     @apply text-3xl;
   }
 
-  code {
-    padding: 10px;
-    font-size: 20px !important;
-  }
-
   p {
     font-size: 20px !important;
   }
@@ -93,16 +88,37 @@ b {
   }
 }
 
-code {
-  background: #343a40;
-  color: white;
-  padding: 4px 8px;
-  @apply rounded-full;
-  font-size: 20px;
-}
-
 p {
   font-size: 25px;
   color: #343a40;
   font-weight: lighter;
+}
+
+.btn-tailwind-example {
+  @apply bg-green-400 p-2 rounded-lg text-white text-2xl;
+}
+
+div.code-bg {
+  background-color: #343a40;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+li {
+  font-size: 20px;
+  color: #343a40;
+  font-weight: lighter;
+  list-style: initial;
+}
+
+ul {
+  margin: 0 17px;
+}
+
+span.code,
+code {
+  background-color: #343a40;
+  @apply text-white font-bold px-1 rounded-md;
 }
