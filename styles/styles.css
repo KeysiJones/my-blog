@@ -86,6 +86,10 @@ b {
   p.subtitle {
     font-size: 23px !important;
   }
+
+  .gist {
+    width: 400px;
+  }
 }
 
 p {
@@ -132,8 +136,10 @@ img.code {
 .blob-code,
 .blob-num {
   @apply text-xl !important;
+  width: 200px;
 }
 .gist-meta {
-  display: none;
+  //hides githubs hosted with <3 message
+  /* display: none; */
 }
 /* End styling embedded gists */
