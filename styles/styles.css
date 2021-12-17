@@ -127,3 +127,13 @@ img.code {
   border-radius: 10px;
   width: 100%;
 }
+
+/* Styling embedded gists */
+.blob-code,
+.blob-num {
+  @apply text-xl !important;
+}
+.gist-meta {
+  display: none;
+}
+/* End styling embedded gists */
