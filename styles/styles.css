@@ -139,7 +139,7 @@ img.code {
   width: 200px;
 }
 .gist-meta {
-  //hides githubs hosted with <3 message
+  /*hides githubs hosted with <3 message*/
   /* display: none; */
 }
 /* End styling embedded gists */
