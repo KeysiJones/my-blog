@@ -6,6 +6,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}

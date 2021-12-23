@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const BASE_URL = process.env.REACT_APP_BLOG_API;
 
 export async function getStaticPaths() {
@@ -18,6 +20,9 @@ export async function getStaticProps(context) {
 }
 
 export default function postDetail({ title, subtitle, body }) {
+  useEffect(() => {
+    window.hljs.highlightAll();
+  }, []);
   return (
     <div className="mb-8">
       <h1 className="font-extrabold">{title}</h1>
