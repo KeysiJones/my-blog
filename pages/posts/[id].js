@@ -38,7 +38,7 @@ export default function postDetail({ title, subtitle, body }) {
       />
       <div className="flex flex-row items-center">
         <img
-          src="/images/cropped-temple-photo.jpg"
+          src="/images/cropped-keysi.jpeg"
           width="100"
           height="100"
           className="rounded-full mr-4"
