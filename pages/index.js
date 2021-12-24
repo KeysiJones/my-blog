@@ -21,12 +21,12 @@ export default function Home({ posts }) {
           <div id="avatar-title">
             <img
               src="/images/cropped-temple-photo.jpg"
-              width="170"
-              height="170"
+              width="120"
+              height="120"
               className="rounded-full mb-2"
             />
             <a
-              className="text-5xl font-bold"
+              className="text-4xl font-bold"
               href="https://linkedin.com/in/keysijones"
             >
               Keysi Jones

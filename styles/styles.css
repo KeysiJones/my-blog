@@ -20,7 +20,7 @@ html {
 }
 
 h2 {
-  @apply text-4xl;
+  @apply text-3xl;
 }
 
 h1,
@@ -50,12 +50,12 @@ b {
   }
 
   h1 {
-    @apply text-5xl mt-20 mb-4 text-left;
+    @apply text-4xl mt-20 mb-4 text-left;
   }
 
   b,
   strong {
-    @apply text-4xl;
+    @apply text-3xl;
   }
 }
 
@@ -71,12 +71,12 @@ b {
   }
 
   h1 {
-    @apply text-4xl font-bold my-2 text-left;
+    @apply text-3xl font-bold my-2 text-left;
   }
 
   b,
   strong {
-    @apply text-3xl;
+    @apply text-2xl;
   }
 
   p {
@@ -84,11 +84,7 @@ b {
   }
 
   p.subtitle {
-    font-size: 23px !important;
-  }
-
-  .gist {
-    width: 400px;
+    font-size: 21px !important;
   }
 
   pre code.hljs {
@@ -99,8 +95,8 @@ b {
 
 p {
   font-size: 25px;
-  color: #1e293b;
-  font-weight: lighter;
+  @apply text-gray-600;
+  font-weight: 300;
 }
 
 .btn-tailwind-example {

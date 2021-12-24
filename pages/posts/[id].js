@@ -25,8 +25,10 @@ export default function postDetail({ title, subtitle, body }) {
   }, []);
   return (
     <div className="mb-8">
-      <h1 className="font-extrabold">{title}</h1>
-      <h2 className="text-gray-500 text-left text-3xl mt-2 mb-4">{subtitle}</h2>
+      <h1 className="font-extrabold py-12 px-10 mb-6 text-white bg-green-400 rounded-lg">
+        {title}
+      </h1>
+      <h2 className="text-gray-500 text-left text-2xl mt-2 mb-4">{subtitle}</h2>
       <div
         id="post-body"
         dangerouslySetInnerHTML={{ __html: body }}
