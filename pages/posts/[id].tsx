@@ -2,15 +2,24 @@ import { useEffect } from "react";
 
 const BASE_URL = process.env.REACT_APP_BLOG_API;
 
+type Post = {
+  id: number;
+  title: string;
+  subtitle: string;
+};
 export async function getStaticPaths() {
   const res = await fetch(`${BASE_URL}/posts/`);
   const posts = await res.json();
-  const paths = posts.map((post) => ({ params: { id: post.id.toString() } }));
+  const paths = posts.map((post: Post) => ({
+    params: { id: post.id.toString() },
+  }));
 
   return { paths, fallback: false };
 }
 
-export async function getStaticProps(context) {
+type CONTEXT = { params: { id: string } };
+
+export async function getStaticProps(context: CONTEXT) {
   const { id } = context.params;
   const res = await fetch(`${BASE_URL}/posts/${id}`);
 
@@ -19,7 +28,13 @@ export async function getStaticProps(context) {
   return { props: { title, subtitle, body } };
 }
 
-export default function postDetail({ title, subtitle, body }) {
+type PROPS = {
+  title: string;
+  subtitle: string;
+  body: string;
+};
+
+export default function postDetail({ title, subtitle, body }: PROPS) {
   useEffect(() => {
     window.hljs.highlightAll();
   }, []);
