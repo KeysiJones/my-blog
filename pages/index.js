@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Article } from "../components/Article";
+import { Article } from "../components/article";
 
 export async function getStaticProps() {
   const BASE_URL = process.env.REACT_APP_BLOG_API;

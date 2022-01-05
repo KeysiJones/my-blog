@@ -1,6 +1,11 @@
 import { useRouter } from "next/router";
 
-export default function Article({ id, title, subtitle }) {
+type ArticleProps = {
+  id: string;
+  title: string;
+  subtitle: string;
+};
+export default function Article({ id, title, subtitle }: ArticleProps) {
   const router = useRouter();
 
   return (

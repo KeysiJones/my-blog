@@ -1,12 +1,12 @@
 import "tailwindcss/tailwind.css";
 import "../styles/styles.css";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Loader } from "../components/Loader";
+import { Loader } from "../components/loader";
 
 config.autoAddCss = false;
 
