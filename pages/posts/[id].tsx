@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const BASE_URL = process.env.REACT_APP_BLOG_API;
@@ -35,6 +36,7 @@ type PROPS = {
 };
 
 export default function postDetail({ title, subtitle, body }: PROPS) {
+  const router = useRouter();
   useEffect(() => {
     window.hljs.highlightAll();
   }, []);
@@ -46,6 +48,14 @@ export default function postDetail({ title, subtitle, body }: PROPS) {
           {subtitle}
         </p>
       </h1>
+      <a>
+        <p
+          onClick={() => router.push('/')}
+          className="text-right hover:underline hover:cursor-pointer mb-4"
+        >
+          Voltar à tela inicial
+        </p>
+      </a>
       <div
         id="post-body"
         dangerouslySetInnerHTML={{ __html: body }}
