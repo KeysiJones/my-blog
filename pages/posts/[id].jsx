@@ -3,24 +3,17 @@ import { useEffect } from "react";
 
 const BASE_URL = process.env.REACT_APP_BLOG_API;
 
-type Post = {
-  id: number;
-  title: string;
-  subtitle: string;
-};
 export async function getStaticPaths() {
   const res = await fetch(`${BASE_URL}/posts/`);
   const posts = await res.json();
-  const paths = posts.map((post: Post) => ({
+  const paths = posts.map((post) => ({
     params: { id: post.id.toString() },
   }));
 
   return { paths, fallback: false };
 }
 
-type CONTEXT = { params: { id: string } };
-
-export async function getStaticProps(context: CONTEXT) {
+export async function getStaticProps(context) {
   const { id } = context.params;
   const res = await fetch(`${BASE_URL}/posts/${id}`);
 
@@ -29,13 +22,7 @@ export async function getStaticProps(context: CONTEXT) {
   return { props: { title, subtitle, body } };
 }
 
-type PROPS = {
-  title: string;
-  subtitle: string;
-  body: string;
-};
-
-export default function postDetail({ title, subtitle, body }: PROPS) {
+export default function postDetail({ title, subtitle, body }) {
   const router = useRouter();
   useEffect(() => {
     window.hljs.highlightAll();
