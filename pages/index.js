@@ -20,7 +20,7 @@ export default function Home({ posts }) {
         <main>
           <div id="avatar-title">
             <img
-              src="/images/cropped-keysi.jpeg"
+              src="/images/cropped-keysi.jpg"
               width="120"
               height="120"
               className="rounded-full mb-2"
