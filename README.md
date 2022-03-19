@@ -21,7 +21,7 @@ npm install
 ### Make sure you have the env variables set
 
 ```bash 
-.env.example to .env.local
+rename .env.example file to .env.local
 ```
 
 ### Run the project
