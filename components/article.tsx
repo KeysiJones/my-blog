@@ -5,7 +5,8 @@ type ArticleProps = {
   title: string;
   subtitle: string;
 };
-export default function Article({ id, title, subtitle }: ArticleProps) {
+
+function Article({ id, title, subtitle }: ArticleProps) {
   const router = useRouter();
 
   return (
