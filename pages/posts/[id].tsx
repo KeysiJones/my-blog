@@ -8,6 +8,10 @@ type Context = {
   };
 }
 
+type Post = {
+  id: number;
+}
+
 type PostDetailProps = {
   title: string,
   subtitle: string,
@@ -17,11 +21,15 @@ type PostDetailProps = {
 export async function getStaticPaths() {
   const apiResponse = await fetch(`${BASE_URL}/posts/`);
   const postList = await apiResponse.json();
-  const paths = postList.map((post: { id: { toString: () => any; }; }) => ({
+  const paths = postList.map((post: Post) => ({
     params: { id: post.id.toString() },
   }));
 
-  return { paths, fallback: false };
+  return {
+    paths,
+    fallback: false
+  };
+
 }
 
 export async function getStaticProps(context: Context) {
