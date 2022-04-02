@@ -39,6 +39,7 @@ export default function postDetail({ title, subtitle, body }: PostDetailProps) {
   const avatarUrl = "https://keysijones.vercel.app";
 
   useEffect(() => {
+    //@ts-ignore
     window.hljs.highlightAll();
   }, []);
 
