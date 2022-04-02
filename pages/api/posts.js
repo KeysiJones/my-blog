@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default function postsApi(req, res) {
+export default function postsApi(_req, res) {
   res.status(200).json([
     {
       id: 1,
