@@ -10,7 +10,7 @@ function Article({ id, title, subtitle }: ArticleProps) {
   const router = useRouter();
 
   return (
-    <div className="mb-16">
+    <article className="mb-16">
       <a className="font-bold">
         <h1
           onClick={() => router.push(`/posts/${id}`)}
@@ -31,7 +31,7 @@ function Article({ id, title, subtitle }: ArticleProps) {
           Keysi Jones
         </a>
       </p>
-    </div>
+    </article>
   );
 }
 

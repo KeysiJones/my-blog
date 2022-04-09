@@ -6,7 +6,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Loader } from "../components/loader";
+import { LoadingSpinner } from "../components/loadingSpinner";
 
 config.autoAddCss = false;
 
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
     router.events.on("routeChangeComplete", handleRouteEnd);
   }, [isLoading, setIsLoading]);
 
-  if (isLoading) return <Loader />;
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <Layout>
