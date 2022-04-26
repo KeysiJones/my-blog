@@ -8,8 +8,6 @@ function Avatar({ image, link }: AvatarProps) {
         <div id="avatar-title">
             <img
                 src={image}
-                width="120"
-                height="120"
                 className="rounded-full mb-2"
             />
             <a

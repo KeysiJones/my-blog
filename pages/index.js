@@ -1,16 +1,18 @@
 import Head from "next/head";
 import { Article, Avatar } from "../components";
 
+const GRAVATAR_HASH = process.env.GRAVATAR_HASH;
+
 export async function getStaticProps() {
   const BASE_URL = process.env.REACT_APP_BLOG_API;
   const apiResponse = await fetch(`${BASE_URL}/posts`);
   const postList = await apiResponse.json();
-
-  return { props: { postList } };
+  const avatarImagePath = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}`;
+  
+  return { props: { postList, avatarImagePath } };
 }
 
-export default function Home({ postList }) {
-  const avatarImagePath = "/images/cropped-keysi.jpg";
+export default function Home({ postList, avatarImagePath }) {
   const avatarLink = "https://linkedin.com/in/keysijones";
   return (
       <main className="flex flex-col border-b">

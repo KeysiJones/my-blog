@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { AboutAvatar, HomePageLink, PostHeader, PostBody } from '../../components'
 const BASE_URL = process.env.REACT_APP_BLOG_API;
+const GRAVATAR_HASH = process.env.GRAVATAR_HASH;
 
 type Context = {
   params: {
@@ -15,7 +16,8 @@ type Post = {
 type PostDetailProps = {
   title: string,
   subtitle: string,
-  body: string
+  body: string,
+  avatarImage: string
 };
 
 export async function getStaticPaths() {
@@ -24,7 +26,7 @@ export async function getStaticPaths() {
   const paths = postList.map((post: Post) => ({
     params: { id: post.id.toString() },
   }));
-
+  
   return {
     paths,
     fallback: false
@@ -37,12 +39,12 @@ export async function getStaticProps(context: Context) {
   const apiResponse = await fetch(`${BASE_URL}/posts/${id}`);
 
   const { title, subtitle, body } = await apiResponse.json();
+  const avatarImage = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}`;
 
-  return { props: { title, subtitle, body } };
+  return { props: { title, subtitle, body, avatarImage } };
 }
 
-export default function postDetail({ title, subtitle, body }: PostDetailProps) {
-  const avatarImage = "/images/cropped-keysi.jpg";
+export default function postDetail({ title, subtitle, body, avatarImage }: PostDetailProps) {
   const avatarName = "Keysi Jones";
   const avatarUrl = "https://keysijones.vercel.app";
 
