@@ -12,8 +12,6 @@ function AboutAvatar({ avatarImage, avatarName, avatarUrl }: AboutAvatarProps) {
         <div className="flex flex-row items-center">
             <img
                 src={avatarImage}
-                width="100"
-                height="100"
                 className="rounded-full mr-4"
             />
             <div className="flex flex-col">
