@@ -22,7 +22,7 @@ export default function New({ apiKey, baseUrl }) {
     title: Yup.string().required("Title is required"),
     subtitle: Yup.string().required("Subtitle is required"),
   });
-  const isPostEmpty = postContent.length <= 0
+  const isPostEmpty = postContent.length <= 0;
 
   useEffect(() => {
     const isValidToken = localStorage.getItem("authToken")?.length === 177;
@@ -69,34 +69,32 @@ export default function New({ apiKey, baseUrl }) {
               },
             })
               .then((response) => {
-                if (response.status === 200) {
-                  response.json();
+                if ([200].includes(response.status)) {
                   console.log("Succesfully logged in");
                 }
-
+                
                 if ([400].includes(response.status)) {
                   alert("Incorrect user and/or password");
-                  return;
                 }
+
+                return response.json();
               })
-              .then((response) => {
+              .then((res) => {
                 fetch(`${baseUrl}/posts/new`, {
                   method: "POST",
                   body: payload,
                   headers: {
                     "Content-Type": "application/json",
-                    "x-access-token": response.token,
+                    "x-access-token": res.token,
                   },
                 })
                   .then((response) => {
-                    if (response.status === 200) {
+                    if ([200].includes(response.status)) {
                       alert("Post created succesfully");
+                      router.push("/");
+                    } else {
+                      alert('Check your credentials')
                     }
-                    response.json();
-                    router.push("/");
-                  })
-                  .then((response) => {
-                    console.log({ response });
                   })
                   .catch((err) => console.log({ err }));
               })
@@ -211,9 +209,7 @@ export default function New({ apiKey, baseUrl }) {
             </div>
             <button
               className={`${
-                isSubmitting || isPostEmpty
-                  ? "bg-green-200"
-                  : "bg-green-400"
+                isSubmitting || isPostEmpty ? "bg-green-200" : "bg-green-400"
               } px-2 rounded-sm text-white text-2xl mb-4`}
               type="submit"
               disabled={isSubmitting || isPostEmpty}
