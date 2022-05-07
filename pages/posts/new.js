@@ -72,7 +72,7 @@ export default function New({ apiKey, baseUrl }) {
                 if ([200].includes(response.status)) {
                   console.log("Succesfully logged in");
                 }
-                
+
                 if ([400].includes(response.status)) {
                   alert("Incorrect user and/or password");
                 }
@@ -93,7 +93,7 @@ export default function New({ apiKey, baseUrl }) {
                       alert("Post created succesfully");
                       router.push("/");
                     } else {
-                      alert('Check your credentials')
+                      alert("Check your credentials");
                     }
                   })
                   .catch((err) => console.log({ err }));
