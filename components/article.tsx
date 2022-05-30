@@ -4,9 +4,10 @@ type ArticleProps = {
   id: string;
   title: string;
   subtitle: string;
+  creationDate: string;
 };
 
-function Article({ id, title, subtitle }: ArticleProps) {
+function Article({ id, title, subtitle, creationDate }: ArticleProps) {
   const router = useRouter();
 
   return (
@@ -23,13 +24,14 @@ function Article({ id, title, subtitle }: ArticleProps) {
         {subtitle}
       </p>
       <p className="mt-4">
-        Postado por{" "}
+        Posted by{" "}
         <a
           className="italic underline"
           href="https://linkedin.com/in/keysijones"
         >
-          Keysi Jones
+          Jones
         </a>
+        {" "} on {creationDate}
       </p>
     </article>
   );

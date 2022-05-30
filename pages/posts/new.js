@@ -59,6 +59,7 @@ export default function New({ apiKey, baseUrl }) {
               title,
               subtitle,
               body,
+              created: new Date().toLocaleString()
             });
 
             fetch(`${baseUrl}/login`, {

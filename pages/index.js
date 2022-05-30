@@ -18,18 +18,19 @@ export default function Home({ postList, avatarImagePath }) {
   return (
     <main className="flex flex-col border-b">
       <Head>
-        <title>Keysi Jones Blog</title>
+        <title>Jones's personal Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <Avatar image={avatarImagePath} link={avatarLink} />
-        <h2 className="mb-12 sm:mb-4">Artigos</h2>
+        <h2 className="mb-12 sm:mb-4">Articles</h2>
         {postList.map((post) => (
           <Article
             key={post.id}
             subtitle={post.subtitle}
             id={post.id}
             title={post.title}
+            creationDate={post.created}
           />
         ))}
       </div>

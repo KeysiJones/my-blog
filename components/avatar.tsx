@@ -14,7 +14,7 @@ function Avatar({ image, link }: AvatarProps) {
                 className="text-4xl font-bold"
                 href={link}
             >
-                Keysi Jones
+                Jones Fernandes
             </a>
         </div>
     )
