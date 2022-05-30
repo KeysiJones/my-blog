@@ -7,7 +7,7 @@ export async function getStaticProps() {
 
   const apiResponse = await fetch(`${BASE_URL}/posts`);
   const postList = await apiResponse.json();
-  const avatarImagePath = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}?s=150`;
+  const avatarImagePath = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}?s=280`;
 
   return { props: { postList, avatarImagePath } };
 }

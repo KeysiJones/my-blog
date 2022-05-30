@@ -9,6 +9,7 @@ function Avatar({ image, link }: AvatarProps) {
             <img
                 src={image}
                 className="rounded-full mb-2"
+                width={150}
             />
             <a
                 className="text-4xl font-bold"

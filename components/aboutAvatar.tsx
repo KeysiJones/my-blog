@@ -13,6 +13,7 @@ function AboutAvatar({ avatarImage, avatarName, avatarUrl }: AboutAvatarProps) {
             <img
                 src={avatarImage}
                 className="rounded-full mr-4"
+                width={100}
             />
             <div className="flex flex-col">
                 <strong>{avatarName}</strong>

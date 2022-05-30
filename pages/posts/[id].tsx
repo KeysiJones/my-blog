@@ -39,7 +39,7 @@ export async function getStaticProps(context: Context) {
   const apiResponse = await fetch(`${BASE_URL}/posts/${id}`);
 
   const { title, subtitle, body } = await apiResponse.json();
-  const avatarImage = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}`;
+  const avatarImage = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}?s=280`;
 
   return { props: { title, subtitle, body, avatarImage } };
 }
